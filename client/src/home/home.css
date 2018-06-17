@@ -3,11 +3,7 @@
 body {
     box-sizing: border-box;
     margin: 0;
-    background: url("https://las-vegas-real-estate-authority.com/wp-content/uploads/2016/12/Las-Vegas-Homes-Strip-View.jpg") no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+    background-color: #fff;
     overflow: auto;
 }
 

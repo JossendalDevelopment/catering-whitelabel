@@ -21,11 +21,10 @@ export class HomeHeader extends Component {
       <div className="home-header">
             
         {this.props.username ? '' : <div className="home-header-login">
-                                  {/* <p>Login:</p> */}
                                   <Login />
                                 </div>}
 
-        <div className="logo-container" onClick={this.handleCartHide}><Link to="/" style={{color: "inherit", cursor: "pointer"}}><h1 className="content-headers-title">Street Eats</h1></Link> <img className="logo-icon" src={trucksvg} alt="logo"/></div>
+        <div className="logo-container" onClick={this.handleCartHide}><Link to="/" style={{color: "inherit", cursor: "pointer"}}><h1 className="content-headers-title">SLets Eat</h1></Link></div>
 
         <div className="home-header-dropdown">
           {this.props.username ? <div className="header-user-info">
@@ -33,10 +32,7 @@ export class HomeHeader extends Component {
                                   {this.props.source === 'user' ? <img src={this.props.avatar} alt="avatar"/> :
                                                                   <img src={this.props.companyLogo} alt=""/>}
                                 </div> : ' '}
-          {/* <div className="dropdown-menu"> */}
-              {/* <HomeDropdown /> */}
               <HomeBurger />
-          {/* </div> */}
         </div>
         <Cart />
       </div>
@@ -45,7 +41,6 @@ export class HomeHeader extends Component {
 }
 
 function mapStateToProps(state) {
-  // console.log(state)
   return {
     username: state.loginReducer.username,
     avatar: state.loginReducer.avatar,
