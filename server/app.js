@@ -14,6 +14,7 @@ import clientRouter from './routes/client'
 const app = express()
 const server = require('http').Server(app)
 const io = require('socket.io')(server)
+const port = 'process.env.PORT'
 // Set up Express middlewares
 // After placing favicon, uncomment favicon import and usage
 app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')))
@@ -23,8 +24,8 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(cookieParser())
 app.use(express.static(path.join(__dirname, 'public')))
 
-server.listen(3001, () => {
-  console.log('listening on port 3001')
+server.listen(port || 3001, () => {
+  console.log('listening on port ' + port)
 })
 
 //socket section
