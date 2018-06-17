@@ -1,0 +1,35 @@
+{
+  "name": "server",
+  "version": "0.0.0",
+  "main": "index.js",
+  "author": "Michael Sweeney <jfmike@gmail.com> (https://github.com/overthemike)",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "caniuse-lite": "^1.0.30000832",
+    "config": "^1.30.0",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.16.2",
+    "express-jwt": "^5.3.1",
+    "js-sha512": "^0.7.1",
+    "jsonwebtoken": "^8.2.1",
+    "moment": "^2.20.1",
+    "morgan": "^1.9.0",
+    "mysql": "^2.15.0",
+    "serve-favicon": "^2.4.5",
+    "socket.io": "^2.1.0",
+    "stripe": "^5.8.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-register": "^6.26.0",
+    "nodemon": "^1.17.3"
+  },
+  "scripts": {
+    "start": "nodemon ./bin/www --exec babel-node",
+    "prebuild": "rimraf ../dist/*",
+    "build": "babel . --ignore node_modules --out-dir ../dist",
+    "postbuild": "cp -r public ../dist && cp package.json ../dist && cp .gitignore ../dist"
+  }
+}
