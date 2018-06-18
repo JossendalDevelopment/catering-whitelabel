@@ -94,8 +94,8 @@ body {
     position: absolute;
     top: -40px;
     z-index: -1;
-    animation-duration: 4s;
-    animation-name: slidein;
+    /* animation-duration: 4s; */
+    /* animation-name: slidein; */
 }
 
 .home-container {
@@ -151,10 +151,10 @@ body {
 }
 
 .home-newsfeed-header {
-    background-image: url('../assets/images/skyline.svg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    /* background-image: url('../assets/images/skyline.svg'); */
+    /* background-size: cover; */
+    /* background-position: center; */
+    /* background-repeat: no-repeat; */
     display: flex;
     justify-content: space-around;
     align-items: center;

@@ -24,7 +24,7 @@ export class HomeHeader extends Component {
                                   <Login />
                                 </div>}
 
-        <div className="logo-container" onClick={this.handleCartHide}><Link to="/" style={{color: "inherit", cursor: "pointer"}}><h1 className="content-headers-title">SLets Eat</h1></Link></div>
+        <div className="logo-container" onClick={this.handleCartHide}><Link to="/" style={{color: "inherit", cursor: "pointer"}}><h1 className="content-headers-title">Lets Eat</h1></Link></div>
 
         <div className="home-header-dropdown">
           {this.props.username ? <div className="header-user-info">
